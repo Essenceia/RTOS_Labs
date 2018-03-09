@@ -16,6 +16,9 @@ void job_with_cpu_time(long execution_time)
   // If you wish, you can print the time (in ns) elapsed between time_start
   // and time_end using the function diff below ...
   
+  time_elapsed = timespec.diff(time_start, time_end);
+  printf("Time elapsed between time_start and time_end\n");
+  
 }
 
 struct timespec diff(struct timespec start, struct timespec end)

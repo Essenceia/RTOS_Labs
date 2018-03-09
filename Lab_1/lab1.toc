@@ -14,13 +14,15 @@
 \contentsline {subsubsection}{\numberline {1.4.2}Volontary}{4}{subsubsection.1.4.2}
 \contentsline {subsubsection}{\numberline {1.4.3}Preempt-rt}{4}{subsubsection.1.4.3}
 \contentsline {subsubsection}{\numberline {1.4.4}Hackbench under RT scheduling policies and priority 49}{5}{subsubsection.1.4.4}
-\contentsline {paragraph}{SHED\_FIFO}{5}{figure.10}
+\contentsline {subsubsection}{\numberline {1.4.5}SHED\_FIFO}{5}{subsubsection.1.4.5}
+\contentsline {subsubsection}{\numberline {1.4.6}SHED\_RR}{5}{subsubsection.1.4.6}
+\contentsline {subsubsection}{\numberline {1.4.7}Consclusion}{6}{subsubsection.1.4.7}
 \contentsline {section}{\numberline {2}ADA concurrent programs}{6}{section.2}
 \contentsline {subsection}{\numberline {2.1}Program 1}{6}{subsection.2.1}
 \contentsline {paragraph}{code}{6}{figure.12}
-\contentsline {paragraph}{Observations}{6}{section*.7}
+\contentsline {paragraph}{Observations}{6}{section*.5}
 \contentsline {subsection}{\numberline {2.2}Program 2}{7}{subsection.2.2}
 \contentsline {paragraph}{code}{7}{figure.13}
-\contentsline {paragraph}{Observations}{7}{section*.9}
-\contentsline {subparagraph}{delay}{8}{section*.10}
-\contentsline {subparagraph}{delay until}{8}{section*.11}
+\contentsline {paragraph}{Observations}{7}{section*.7}
+\contentsline {subparagraph}{delay}{8}{section*.8}
+\contentsline {subparagraph}{delay until}{8}{section*.9}

@@ -133,7 +133,8 @@ T: 3 (  698) P: 0 I:2500 C: 488301 Min:     15 Act:   64 Avg:   65 Max:     545
 \caption{SHED\_RR preempt-rl}
 \end{figure}
 \subsubsection{Conclusion}
-We observe that throughout all the diffrent scheduals have about similar avredge execution times with a slight advantage for the volontary kernel. But, we there is a muth higher maximum times for the volontary kernel than the preemptive kernel, this is because the preemptive kernel was designed to give a best worst time performance.
+We observe that throughout all the diffrent scheduals have about similar avredge execution times with a slight advantage for the volontary kernel. But, we there is a muth higher maximum times for the volontary kernel than the preemptive kernel, this is because the preemptive kernel was designed for consistency and to give a best worst case latency by minimizing the part of the kernel that can not be preempted.  This has negative effects on the avregde execution time that is worst than in the volontary kernel \footnote{to help improve the situation lazy preemption was intoduced for SHED\_OTHER, see more \url{https://lwn.net/Articles/522144/}} as more overhead is necessary to ensure this determinist behaviour. This involves mechanisms sutch as priority inheritence to avoiding deadlocks or real-time throttling.
+
 %Todo need shed other to conclude
 \subsection{Cyclictest + Hackbench}
 \subsubsection{Hackbench under SHED\_OTHER and priority 20}
@@ -169,21 +170,22 @@ T: 1 ( 1451) P:99 I:1500 C:  47251 Min:      8 Act:   20 Avg:   21 Max:      83
 T: 2 ( 1452) P:99 I:2000 C:  35438 Min:      9 Act:   23 Avg:   21 Max:      69
 T: 3 ( 1453) P:99 I:2500 C:  28350 Min:      9 Act:   21 Avg:   21 Max:      92
 \end{lstlisting}
+
 \subsubsection{Hackbench under RT scheduling policies and priority 49}
-\paragraph{SHED\_FIFO}
+\subsubsection{SHED\_FIFO}
 \begin{figure}[H]
 \includegraphics[width=16cm]{Hackbench2.png}
 \caption{Hackbench with shed\_fifo and priority 49}
 \end{figure}
 \begin{figure}[H]
 \includegraphics[width=16cm]{Preempt-Fifo-WithHackbench2.png}
-\caption{Preempt-rt with fifo}
+\caption{Volontary with fifo}
 \end{figure}
 \begin{figure}[H]
-\includegraphics[width=16cm]{Preempt-Fifo-WithHackbench2.png}
+\includegraphics[width=16cm]{Volontary-Fifo-WithHackbench2.png}
 \caption{Preempt-rt with fifo}
 \end{figure}
-\paragraph{SHED\_RR}
+\subsubsection{SHED\_RR}
 \begin{lstlisting}[language=bash,caption={Hackbench with shed\_rr and priority 49}]
 pi@raspberrypi:~/rt-tests$ sudo chrt --rr 49 ./hackbench -l 1000000 -g 1q                     
 Each sender will pass 1000000 messages of 100 bytes
@@ -201,6 +203,9 @@ T: 1 (  833) P:99 I:1500 C: 225480 Min:      8 Act:   54 Avg:   96 Max:   49563
 T: 2 (  834) P:99 I:2000 C: 169312 Min:      8 Act:   18 Avg:  118 Max:   49511
 T: 3 (  835) P:99 I:2500 C: 135316 Min:      9 Act:   19 Avg:  144 Max:   47964
 \end{lstlisting}
+\subsubsection{Consclusion}
+With hackbench we are introducing significant stress on our systems and are truelly revealing the core diffrence between the volontary and the full preemptable kernel : consistancy. Avredge times are grouped more closely and althow minimum times are vagly similar the interval between minimum and maximum times are vasty diffrent in favor of the preemptable kernel.
+This is particularly apparent when hackbench is given a priority of 49 and using fifo. As our task have a higher priority we are preempting the hackbench tasks and running the cyclictest instead. 
 \section{ADA concurrent programs}
 \subsection{Program 1}
 \paragraph{code}
@@ -224,14 +229,12 @@ The A,B,C,D are printed in order throwout the execution with there not beeing an
 \end{figure}
 
 \paragraph{Observations}
-%Todo recall the main diffrences between the two packages and constructs
 In this test we can observe that even thow both treads are confirured to sleep for the same 100ms time interval they eventually end up off sync. We can attribute this to the diffrence between the way time is treated in the \emph{delay} and \emph{delay until}.
 \\
 %diffrence
 \subparagraph{delay}
-This main diffrence is that \emph{delay} uses an \textit{approximate relative time delay}. It measured the time from a specific refrence point . If this refrence point si deisplaced in time by the process beeing preempted for example this  introduces a delay of \emph{at least} the amount of time specified,not the exact specified task. This introdoced local drift (delay) can be cumulated resulting in this unsynchronisation.
-If we wanted delay to wait for an absolute time then the task would have to run uninterrupted by any other task whitch is not the case here.
+This main diffrence is that \emph{delay} uses an \textit{approximate relative time delay}. It measured the time from a specific refrence point . If this refrence point is displaced in time by the process being preempted for example this  introduces a delay of \emph{at least} the amount of time specified,not the exact specified task. This introduced local drift (delay) can be cumulated resulting in this de-synchronization.
+If we wanted delay to wait for an absolute time then the task would have to run uninterrupted by any other task which is not the case here.
 \subparagraph{delay until}
-This statement sheduales for an absolute wake-up task, this works by making the task not schedualable until the interval time has elapsed. Her again there is no guaranty on the actual time the task will be executed if for example the ressource required to handle that task is not available ( used by a higher priority task , ect ... ) the task will still eventually stall. 
-%todo finish later 
+This statement schedules for an absolute wake-up task, this works by making the task not schedule until the interval time has elapsed. Her again there is no guaranty on the actual time the task will be executed if for example the resource required to handle that task is not available ( used by a higher priority task , ect ... ) the task will still eventually stall. Yet, as there is no ressource sharing in this case we can asume that the task will be handled immediately\footnote{With very little latency} after it is marked as ready.
 \end{document}

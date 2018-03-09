@@ -19,6 +19,8 @@
 \author{Julia Desmazes}
 \title{Lab1 Rasbian RT}
 \begin{document}
+\maketitle
+
 \section{Latency test}
 \subsection{Supported schedualing policies}
 \subsection{Cyclictest}
@@ -40,8 +42,30 @@ In linux priority ranges are fixed by the schedualing algorythme used. by defaul
 -p PRIO  --prio=PRIO       priority of highest prio thread
 \end{lstlisting}
 \subsection{Test}
-\paragraph{SHED\_FIFO}
-\emph{Missing shed\_other !!}
+\subsubsection{SHED\_OTHER}
+
+\begin{lstlisting}[language=bash,caption={preempt-rt kernel}]
+^Cpi@raspberrypi:~/rt-tests$ sudo ./cyclictest --policy=other -t -n
+policy: other/other: loadavg: 0.01 0.03 0.03 1/150 1324          
+
+T: 0 ( 1229) P: 0 I:1000 C:1242270 Min:     21 Act:   71 Avg:   69 Max:    2541
+T: 1 ( 1230) P: 0 I:1500 C: 828181 Min:     21 Act:   67 Avg:   67 Max:    1991
+T: 2 ( 1231) P: 0 I:2000 C: 621135 Min:     21 Act:   68 Avg:   68 Max:    4476
+T: 3 ( 1232) P: 0 I:2500 C: 496909 Min:     21 Act:   67 Avg:   69 Max:    3180
+\end{lstlisting}
+\begin{lstlisting}[language=bash,caption={volontary kernel}]
+sudo ./cyclictest -t -n
+
+policy: other/other: loadavg: 0.31 0.09 0.02 1/116 702          
+
+T: 0 (  695) P: 0 I:1000 C:1220752 Min:     15 Act:   66 Avg:   66 Max:     528
+T: 1 (  696) P: 0 I:1500 C: 813835 Min:     15 Act:   65 Avg:   64 Max:     490
+T: 2 (  697) P: 0 I:2000 C: 610376 Min:     16 Act:   66 Avg:   67 Max:    1354
+T: 3 (  698) P: 0 I:2500 C: 488301 Min:     15 Act:   64 Avg:   65 Max:     545
+
+\end{lstlisting}
+
+\subsubsection{SHED\_FIFO}
 \begin{figure}[H]
 \includegraphics[width=16cm]{Voluntary-Fifo-WithoutHackbench.png}
 \caption{SHED\_FIFO volontary}
@@ -50,7 +74,7 @@ In linux priority ranges are fixed by the schedualing algorythme used. by defaul
 \includegraphics[width=16cm]{Preempt-Fifo-WithoutHackbench.png}
 \caption{SHED\_FIFO preempt-rl}
 \end{figure}
-\paragraph{SHED\_RR}
+\subsubsection{SHED\_RR}
 \begin{figure}[h]
 \includegraphics[width=16cm]{Voluntary-RR-WithoutHackbench.png}
 \caption{SHED\_RR volontary}
@@ -59,6 +83,8 @@ In linux priority ranges are fixed by the schedualing algorythme used. by defaul
 \includegraphics[width=16cm]{Preempt-RR-WithoutHackbench.png}
 \caption{SHED\_RR preempt-rl}
 \end{figure}
+\subsubsection{Conclusion}
+We observe that throughout all the diffrent scheduals have about similar avredge execution times with a slight advantage for the volontary kernel. But, we there is a muth higher maximum times for the volontary kernel than the preemptive kernel, this is because the preemptive kernel was designed to give a best worst time performance.
 %Todo need shed other to conclude
 \subsection{Cyclictest + Hackbench}
 \subsubsection{Hackbench under SHED\_OTHER and priority 20}
@@ -66,7 +92,7 @@ In linux priority ranges are fixed by the schedualing algorythme used. by defaul
 \includegraphics[width=16cm]{Volontary-other-Hackbench-p20.png}
 \caption{Hackbench under SHED\_OTHER and priority 20}
 \end{figure}
-\paragraph{Volontary}
+\subsubsection{Volontary}
 \begin{figure}[H]
 \includegraphics[width=16cm]{Volontary-Fifo-WithHackbench1.png}
 \caption{Volontary fifo with hackbench}
@@ -75,16 +101,25 @@ In linux priority ranges are fixed by the schedualing algorythme used. by defaul
 \includegraphics[width=16cm]{Volontary-Rr-WithHackbench1.png}
 \caption{Volontary rr with hackbench}
 \end{figure}
-\paragraph{Preempt-rt}
-\begin{figure}[H]
-\includegraphics[width=16cm]{Volontary-Fifo-WithHackbench1.png}
-\caption{Volontary fifo with hackbench}
-\end{figure}
-\begin{figure}[H]
-\includegraphics[width=16cm]{Volontary-Rr-WithHackbench1.png}
-\caption{Volontary rr with hackbench}
-\end{figure}
-\emph{Missing tests on preempt-rt kernel}
+\subsubsection{Preempt-rt}
+\begin{lstlisting}[language=bash,caption={Preempt fifo with hackbench}]
+pi@raspberrypi:~/rt-tests$ sudo ./cyclictest --policy=fifo -t -n -p99
+policy: fifo: loadavg: 130.65 51.20 18.86 85/551 1404           
+
+T: 0 ( 1396) P:99 I:1000 C: 106248 Min:      7 Act:   26 Avg:   20 Max:      78
+T: 1 ( 1397) P:99 I:1500 C:  70832 Min:      7 Act:   18 Avg:   20 Max:      73
+T: 2 ( 1398) P:99 I:2000 C:  53124 Min:      7 Act:   24 Avg:   20 Max:      73
+T: 3 ( 1399) P:99 I:2500 C:  42499 Min:      9 Act:   22 Avg:   21 Max:      74
+\end{lstlisting}
+\begin{lstlisting}[language=bash,caption={Preempt rr with hackbench}]
+pi@raspberrypi:~/rt-tests$ sudo ./cyclictest --policy=rr -t -n -p99 
+policy: rr: loadavg: 133.77 95.30 43.45 100/551 1454          
+
+T: 0 ( 1450) P:99 I:1000 C:  70877 Min:      8 Act:   20 Avg:   20 Max:      91
+T: 1 ( 1451) P:99 I:1500 C:  47251 Min:      8 Act:   20 Avg:   21 Max:      83
+T: 2 ( 1452) P:99 I:2000 C:  35438 Min:      9 Act:   23 Avg:   21 Max:      69
+T: 3 ( 1453) P:99 I:2500 C:  28350 Min:      9 Act:   21 Avg:   21 Max:      92
+\end{lstlisting}
 \subsubsection{Hackbench under RT scheduling policies and priority 49}
 \paragraph{SHED\_FIFO}
 \begin{figure}[H]
@@ -100,9 +135,23 @@ In linux priority ranges are fixed by the schedualing algorythme used. by defaul
 \caption{Preempt-rt with fifo}
 \end{figure}
 \paragraph{SHED\_RR}
-\emph{Missing hackbench with sched -rr 49 and accompaning tests}
-%todo alsk the teatcher if we sould have done this test on the volontary if so missing even more screenshots
-Can't finish missing screanshots
+\begin{lstlisting}[language=bash,caption={Hackbench with shed\_rr and priority 49}]
+pi@raspberrypi:~/rt-tests$ sudo chrt --rr 49 ./hackbench -l 1000000 -g 1q                     
+Each sender will pass 1000000 messages of 100 bytes
+\end{lstlisting}
+\begin{figure}[H]
+\includegraphics[width=16cm]{Preempt-RR-WithHackbench.png}
+\caption{Preempt-rt with fifo}
+\end{figure}
+\begin{lstlisting}[language=bash,caption={Volontary kernel}]
+sudo ./cyclictest --policy=rr -t -n -p99
+policy: rr: loadavg: 29.39 27.96 14.37 32/161 848          
+
+T: 0 (  832) P:99 I:1000 C: 338191 Min:      8 Act:   18 Avg:   67 Max:   49660
+T: 1 (  833) P:99 I:1500 C: 225480 Min:      8 Act:   54 Avg:   96 Max:   49563
+T: 2 (  834) P:99 I:2000 C: 169312 Min:      8 Act:   18 Avg:  118 Max:   49511
+T: 3 (  835) P:99 I:2500 C: 135316 Min:      9 Act:   19 Avg:  144 Max:   47964
+\end{lstlisting}
 \section{ADA concurrent programs}
 \subsection{Program 1}
 \paragraph{code}
@@ -123,9 +172,17 @@ The A,B,C,D are printed in order throwout the execution with there not beeing an
 \verbatiminput{main2.adb}
 \caption{Program 2}
 \end{center}
+\end{figure}
 
 \paragraph{Observations}
 %Todo recall the main diffrences between the two packages and constructs
 In this test we can observe that even thow both treads are confirured to sleep for the same 100ms time interval they eventually end up off sync. We can attribute this to the diffrence between the way time is treated in the \emph{delay} and \emph{delay until}.
+\\
+%diffrence
+\subparagraph{delay}
+This main diffrence is that \emph{delay} uses an \textit{approximate relative time delay}. It measured the time from a specific refrence point . If this refrence point si deisplaced in time by the process beeing preempted for example this  introduces a delay of \emph{at least} the amount of time specified,not the exact specified task. This introdoced local drift (delay) can be cumulated resulting in this unsynchronisation.
+If we wanted delay to wait for an absolute time then the task would have to run uninterrupted by any other task whitch is not the case here.
+\subparagraph{delay until}
+This statement sheduales for an absolute wake-up task, this works by making the task not schedualable until the interval time has elapsed. Her again there is no guaranty on the actual time the task will be executed if for example the ressource required to handle that task is not available ( used by a higher priority task , ect ... ) the task will still eventually stall. 
 %todo finish later 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.5)  8 MAR 2018 17:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2018.3.5)  9 MAR 2018 13:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -755,253 +755,266 @@ LaTeX Info: Redefining \nameref on input line 21.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count130
-LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+<ECE.png, id=68, 225.84375pt x 225.84375pt>
+File: ECE.png Graphic file (type png)
+<use ECE.png>
+Package pdftex.def Info: ECE.png  used on input line 27.
+(pdftex.def)             Requested size: 284.52756pt x 284.5646pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ECE.png>] (./lab1.toc)
+\tf@toc=\write4
+\openout4 = `lab1.toc'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.72 \newpage
+              [1] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 32.
+nput line 81.
 
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 51--52
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 100--101
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 52--53
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 101--102
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 53--54
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 102--103
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 54--55
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 103--104
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 61--62
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 110--111
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][] 
  []
 
-[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 62--63
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 111--112
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 63--64
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 112--113
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 64--66
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 113--115
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][] 
  []
 
-<Voluntary-Fifo-WithoutHackbench.png, id=103, 733.74126pt x 137.51375pt>
+<Voluntary-Fifo-WithoutHackbench.png, id=101, 733.74126pt x 137.51375pt>
 File: Voluntary-Fifo-WithoutHackbench.png Graphic file (type png)
 <use Voluntary-Fifo-WithoutHackbench.png>
 Package pdftex.def Info: Voluntary-Fifo-WithoutHackbench.png  used on input lin
-e 70.
+e 119.
 (pdftex.def)             Requested size: 455.24408pt x 85.32059pt.
-<Preempt-Fifo-WithoutHackbench.png, id=104, 738.76pt x 139.52126pt>
+<Preempt-Fifo-WithoutHackbench.png, id=102, 738.76pt x 139.52126pt>
 File: Preempt-Fifo-WithoutHackbench.png Graphic file (type png)
 <use Preempt-Fifo-WithoutHackbench.png>
 Package pdftex.def Info: Preempt-Fifo-WithoutHackbench.png  used on input line 
-74.
+123.
 (pdftex.def)             Requested size: 455.24408pt x 85.97643pt.
-<Voluntary-RR-WithoutHackbench.png, id=105, 733.74126pt x 137.51375pt>
+[2]
+<Voluntary-RR-WithoutHackbench.png, id=142, 733.74126pt x 137.51375pt>
 File: Voluntary-RR-WithoutHackbench.png Graphic file (type png)
 <use Voluntary-RR-WithoutHackbench.png>
 Package pdftex.def Info: Voluntary-RR-WithoutHackbench.png  used on input line 
-79.
+128.
 (pdftex.def)             Requested size: 455.24408pt x 85.32059pt.
-<Preempt-RR-WithoutHackbench.png, id=106, 723.70375pt x 141.52875pt>
+<Preempt-RR-WithoutHackbench.png, id=143, 723.70375pt x 141.52875pt>
 File: Preempt-RR-WithoutHackbench.png Graphic file (type png)
 <use Preempt-RR-WithoutHackbench.png>
-Package pdftex.def Info: Preempt-RR-WithoutHackbench.png  used on input line 83
-.
+Package pdftex.def Info: Preempt-RR-WithoutHackbench.png  used on input line 13
+2.
 (pdftex.def)             Requested size: 455.24408pt x 89.02968pt.
-<Volontary-other-Hackbench-p20.png, id=107, 729.72626pt x 79.29625pt>
+<Volontary-other-Hackbench-p20.png, id=144, 729.72626pt x 79.29625pt>
 File: Volontary-other-Hackbench-p20.png Graphic file (type png)
 <use Volontary-other-Hackbench-p20.png>
 Package pdftex.def Info: Volontary-other-Hackbench-p20.png  used on input line 
-90.
+141.
 (pdftex.def)             Requested size: 455.24408pt x 49.46927pt.
-[2 <./Voluntary-Fifo-WithoutHackbench.png> <./Preempt-Fifo-WithoutHackbench.png
-> <./Voluntary-RR-WithoutHackbench.png> <./Preempt-RR-WithoutHackbench.png>]
-<Volontary-Fifo-WithHackbench1.png, id=125, 731.73375pt x 132.495pt>
+ [3 <./Voluntary-Fifo-WithoutHackbench.png> <./Preempt-Fifo-WithoutHackbench.pn
+g> <./Voluntary-RR-WithoutHackbench.png> <./Preempt-RR-WithoutHackbench.png>]
+<Volontary-Fifo-WithHackbench1.png, id=154, 731.73375pt x 132.495pt>
 File: Volontary-Fifo-WithHackbench1.png Graphic file (type png)
 <use Volontary-Fifo-WithHackbench1.png>
 Package pdftex.def Info: Volontary-Fifo-WithHackbench1.png  used on input line 
-95.
+146.
 (pdftex.def)             Requested size: 455.24408pt x 82.43109pt.
-<Volontary-Rr-WithHackbench1.png, id=126, 725.71124pt x 141.52875pt>
+<Volontary-Rr-WithHackbench1.png, id=155, 725.71124pt x 141.52875pt>
 File: Volontary-Rr-WithHackbench1.png Graphic file (type png)
 <use Volontary-Rr-WithHackbench1.png>
-Package pdftex.def Info: Volontary-Rr-WithHackbench1.png  used on input line 99
-.
+Package pdftex.def Info: Volontary-Rr-WithHackbench1.png  used on input line 15
+0.
 (pdftex.def)             Requested size: 455.24408pt x 88.7835pt.
 
-Overfull \hbox (1.40219pt too wide) in paragraph at lines 107--108
+Overfull \hbox (1.40219pt too wide) in paragraph at lines 158--159
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][]
  []
 
 
-Overfull \hbox (1.40219pt too wide) in paragraph at lines 108--109
+Overfull \hbox (1.40219pt too wide) in paragraph at lines 159--160
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][]
  []
 
 
-Overfull \hbox (1.40219pt too wide) in paragraph at lines 109--110
+Overfull \hbox (1.40219pt too wide) in paragraph at lines 160--161
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][]
  []
 
 
-Overfull \hbox (1.40219pt too wide) in paragraph at lines 110--111
+Overfull \hbox (1.40219pt too wide) in paragraph at lines 161--162
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][]
  []
 
 
-Overfull \hbox (1.40219pt too wide) in paragraph at lines 116--117
+Overfull \hbox (1.40219pt too wide) in paragraph at lines 167--168
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][]
  []
 
 
-Overfull \hbox (1.40219pt too wide) in paragraph at lines 117--118
+Overfull \hbox (1.40219pt too wide) in paragraph at lines 168--169
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][]
  []
 
 
-Overfull \hbox (1.40219pt too wide) in paragraph at lines 118--119
+Overfull \hbox (1.40219pt too wide) in paragraph at lines 169--170
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][]
  []
 
 
-Overfull \hbox (1.40219pt too wide) in paragraph at lines 119--120
+Overfull \hbox (1.40219pt too wide) in paragraph at lines 170--171
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][]
  []
 
-[3 <./Volontary-other-Hackbench-p20.png> <./Volontary-Fifo-WithHackbench1.png> 
+[4 <./Volontary-other-Hackbench-p20.png> <./Volontary-Fifo-WithHackbench1.png> 
 <./Volontary-Rr-WithHackbench1.png>]
-<Hackbench2.png, id=150, 725.71124pt x 72.27pt>
+<Hackbench2.png, id=178, 725.71124pt x 72.27pt>
 File: Hackbench2.png Graphic file (type png)
 <use Hackbench2.png>
-Package pdftex.def Info: Hackbench2.png  used on input line 124.
+Package pdftex.def Info: Hackbench2.png  used on input line 175.
 (pdftex.def)             Requested size: 455.24408pt x 45.33624pt.
-<Preempt-Fifo-WithHackbench2.png, id=151, 730.73pt x 171.64125pt>
+<Preempt-Fifo-WithHackbench2.png, id=179, 730.73pt x 171.64125pt>
 File: Preempt-Fifo-WithHackbench2.png Graphic file (type png)
 <use Preempt-Fifo-WithHackbench2.png>
-Package pdftex.def Info: Preempt-Fifo-WithHackbench2.png  used on input line 12
-8.
+Package pdftex.def Info: Preempt-Fifo-WithHackbench2.png  used on input line 17
+9.
 (pdftex.def)             Requested size: 455.24408pt x 106.9324pt.
 File: Preempt-Fifo-WithHackbench2.png Graphic file (type png)
 <use Preempt-Fifo-WithHackbench2.png>
-Package pdftex.def Info: Preempt-Fifo-WithHackbench2.png  used on input line 13
-2.
+Package pdftex.def Info: Preempt-Fifo-WithHackbench2.png  used on input line 18
+3.
 (pdftex.def)             Requested size: 455.24408pt x 106.9324pt.
-<Preempt-RR-WithHackbench.png, id=152, 678.535pt x 139.52126pt>
+<Preempt-RR-WithHackbench.png, id=180, 678.535pt x 139.52126pt>
 File: Preempt-RR-WithHackbench.png Graphic file (type png)
 <use Preempt-RR-WithHackbench.png>
-Package pdftex.def Info: Preempt-RR-WithHackbench.png  used on input line 141.
+Package pdftex.def Info: Preempt-RR-WithHackbench.png  used on input line 192.
 (pdftex.def)             Requested size: 455.24408pt x 93.60648pt.
 
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 148--149
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 199--200
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 149--150
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 200--201
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][] 
  []
 
-[4 <./Hackbench2.png> <./Preempt-Fifo-WithHackbench2.png> <./Preempt-RR-WithHac
+[5 <./Hackbench2.png> <./Preempt-Fifo-WithHackbench2.png> <./Preempt-RR-WithHac
 kbench.png>]
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 150--151
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 201--202
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.00217pt too wide) in paragraph at lines 151--152
+Overfull \hbox (14.00217pt too wide) in paragraph at lines 202--203
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][] 
  []
 
 File: main.adb  (verbatim)
 File: main2.adb  (verbatim)
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 177--180
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 228--231
 
  []
 
-[6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 186.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 186.
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 237.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 237.
  (./lab1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 186.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 186.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 237.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 237.
 Package rerunfilecheck Info: File `lab1.out' has not changed.
-(rerunfilecheck)             Checksum: C998A2CA47B94858864A96CFA8455B2C;1055.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 186.
+(rerunfilecheck)             Checksum: BA193AEEAAD8AD3B57510AAB1E632D78;1125.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 237.
  ) 
 Here is how much of TeX's memory you used:
- 9228 strings out of 492982
- 128157 string characters out of 6138580
- 269023 words of memory out of 5000000
- 12558 multiletter control sequences out of 15000+600000
- 12544 words of font info for 49 fonts, out of 8000000 for 9000
+ 9233 strings out of 492982
+ 128226 string characters out of 6138580
+ 276085 words of memory out of 5000000
+ 12559 multiletter control sequences out of 15000+600000
+ 11612 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,8n,51p,472b,1837s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on lab1.pdf (7 pages, 397106 bytes).
+/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt8.pfb>
+Output written on lab1.pdf (9 pages, 384636 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
- 98 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 282 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
+ 101 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 

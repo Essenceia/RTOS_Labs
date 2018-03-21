@@ -1,0 +1,79 @@
+V "GNAT Lib v5"
+M P W=b
+P ZX
+
+RN
+RV NO_IO
+RV SPARK_05
+
+U blink%b		blink.adb		f6d93962 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.streams.stream_io%s  a-ststio.adb		a-ststio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W bcm2835_h%s		bcm2835_h.ads		bcm2835_h.ali
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-comlin.ads		20140225151544 ea62afbc ada.command_line%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-ststio.ads		20120709130952 c3455b31 ada.streams.stream_io%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D bcm2835_h.ads		20160807143722 ba6d935f bcm2835_h%s
+D blink.adb		20160420103645 09dfbaff blink%b
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-c.ads		20110801143639 5421119b interfaces.c%s
+D i-cstrin.ads		20140611122922 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D stdint_h.ads		20160807143722 dbca2f69 stdint_h%s
+D system.ads		20141030114420 bb029e6a system%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 11|3r6 3r23 4r6 5r6 5r28
+X 2 a-comlin.ads
+38K13*Command_Line 139e21 11|5w10 5r32
+X 5 a-stream.ads
+36K13*Streams 87e16 11|4r10
+X 6 a-ststio.ads
+39K21*Stream_IO 223e26 11|4w18
+X 8 a-textio.ads
+49K13*Text_IO 471e16 11|3w10 3r27
+263U14*Put_Line 11|10s7 25s7
+X 10 bcm2835_h.ads
+8K9*bcm2835_h 1878e14 11|1w6 9r15 13r4 13r59 14r59 17r7 17r63 18r7 19r7 19r63
+. 20r7 24r15
+711M12*bcm2835FunctionSelect{13|43M9}
+713m4*BCM2835_GPIO_FSEL_OUTP{711M12} 11|14r69
+841M12*RPiGPIOPin{13|43M9}
+847m4*RPI_GPIO_P1_11{841M12} 11|13r69 17r73 19r73
+1111V13*bcm2835_init{13|35I9} 11|9s25
+1118V13*bcm2835_close{13|35I9} 11|24s25
+1240U14*bcm2835_gpio_fsel 11|13s14
+1478U14*bcm2835_delay 11|18s17 20s17
+1503U14*bcm2835_gpio_write 11|17s17 19s17
+X 11 blink.adb
+7U11*Blink 7b11 27t4
+X 12 interfac.ads
+38K9*Interfaces 11|2r6 2r24 13r32 14r32 17r36 19r36 12|178e15
+X 13 i-c.ads
+18K20*C 11|2w17 2r35 13r43 14r43 17r47 19r47 13|230e17
+35I9*int<integer>
+43M9*unsigned
+47M9*unsigned_char 11|13r45 14r45 17r49 19r49
+

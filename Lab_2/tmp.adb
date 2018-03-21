@@ -8,7 +8,7 @@ with System.Task_Info; use System.Task_Info;
 
 procedure Simple is
    -- Import the C function stack_prefault defined in pre_fault.c ...
-	
+ 	
 	function Stack_Prefault return Integer;
 	pragma Import (C, Stack_Prefault, "stack_prefault");
    
@@ -22,7 +22,8 @@ procedure Simple is
 	function Job_With_Cpu_Time return Integer;
 	pragma Import (C, Job_With_Cpu_Time, "job_with_cpu_time");
    
-   -- Set the priority of the main procedure Simple at maximum. Note that if this 
+
+      	-- Set the priority of the main procedure Simple at maximum. Note that if this 
    -- setting is not done, then the priorities of T_1 and T_2 below will not be set 
    -- at the desired level ...
 
@@ -55,7 +56,8 @@ procedure Simple is
       
       -- Set the EET as a long integer to be passed to job_with_cpu_time ...
 
-	EET_T_1 : long integer := Nanoseconds(19000000);
+	EET_T_1 : long integer;
+       EET_T_1	:= Nanoseconds(19000000);
 	
       
    begin 
@@ -92,7 +94,8 @@ procedure Simple is
       
       -- Set the EET as a long integer to be passed to job_with_cpu_time ...
 
-	EET_T_2 : long integer := Nanoseconds(39000000);	
+	EET_T_2 : long integer;
+       EET_T_2	:= Nanoseconds(39000000);	
       
    begin 
       Next := Ada.Real_Time.Clock;     

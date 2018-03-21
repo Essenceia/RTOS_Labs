@@ -14,18 +14,20 @@ procedure Simple is
 	procedure Lock_Memory;
 	pragma Import (C, Lock_Memory , "lock_memory");	
    -- Import the C function job_with_cpu_time defined in clk_time.c ...
-   	procedure  Job_With_CPU(Ex_T : Integer );  
+   	procedure  Job_With_CPU(Ex_T : Long_Integer );  
 	pragma Import(C, Job_With_CPU , "job_with_cpu_time");	
    -- Set the priority of the main procedure Simple at maximum. Note that if this 
    -- setting is not done, then the priorities of T_1 and T_2 below will not be set 
    -- at the desired level ...
-  pragma Prority(System.Priority'First );
+  pragma Priority(System.Priority'First);
   -- inheritence for prority for T1 and T2
    -- Declare an anonymous task T_1 and set its priority ...
-   task T_1;
-   task T_2;
-   pragma Set_Priority(System.Priority'First, T1);
-   pragma Set_Priority(System.Priority'First, T2);
+   task T_1 is
+   pragma Priority(System.Priority'First);
+   end T_1;
+   task T_2 is
+   pragma Priority(System.Priority'First);
+   end T_2;
    -- Declare an anonymous task T_2 and set its priority ...
    
    -- T_1 is a periodic task of 150 iterations with an exact execution time EET 
@@ -34,52 +36,67 @@ procedure Simple is
    task body T_1 is 
       Next : Ada.Real_Time.Time;
      -- declare variables
-      Periode : constant Ada.Real_Time.Time_Span := Ada.Real_Time.Milliseconds();--todo finish from here 
-      Deadline : Integer; 
-      EET : Long Integer;
+      Periode : constant Ada.Real_Time.Time_Span := Ada.Real_Time.Milliseconds(60);--todo finish from here 
+      Deadline : Ada.Real_Time.Time_Span := Milliseconds(60); 
+      EET :Long_Integer:= 18*1000000; -- *150;
      
       -- Set the period ...
      
-      Period:= 60 ; -- to be modified according to instructions
+    --  Periode:= Ada.Real_Time.Milliseconds(60) ; -- to be modified according to instructions
       -- Set the deadline ...
-      Deadline := 18 ; 
+     
+     -- Deadline := Ada.Real_Time.Milliseconds(18) ; 
       -- Set the EET as a long integer to be passed to job_with_cpu_time ...
-      EET := 18*150;
+    --  EET := To_Time_Span(2);
       begin 
       Next := Ada.Real_Time.Clock;     
-      for J in 1 .. 150 loop
-       begin
+   --   for J in 1 .. 150 loop
+for J in 1 .. 150 loop -- for testing only     
+   begin-- launch a fresh new child @w@ so cute <3 yes this is to see if my comerads read the code :) hello andy and nico
             -- Launch the job ...
-      --      Job_With_CPU(
+           Job_With_CPU(EET);
             -- Check if the deadline is respected ...
-        Put_Line("hello T1");              
-            Next := Next + Period;
+       	    if Clock - Next > Deadline 
+	    then
+		    Put_Line("Task 1 has missed deadline ");
+--	    else
+		 --   Put_Line("T1 all good "); --prety sure this will be introducing latency
+	    end if;
+	                
+            Next := Next + Periode;
             delay until Next;           
-         end;
+        end;
       end loop; 
-   end T_1;
+--	end;  
+ end T_1;
    
    -- T_2 is a periodic task of 150 iterations with a job EET close to 40ms and 
    -- an implicit relative deadline to be defined  according to the lab instructions ...
    task body T_2 is  
       Next : Ada.Real_Time.Time;
       -- Set the period ... 
-      
+  	Periode : constant Ada.Real_Time.Time_Span := Ada.Real_Time.Milliseconds(60);    
       -- Set the deadline ...
+	Deadline : Ada.Real_Time.Time_Span := Milliseconds(60);
       
       -- Set the EET as a long integer to be passed to job_with_cpu_time ...
-      
+      EET : Long_Integer := 38*1000000;
    begin 
       Next := Ada.Real_Time.Clock;     
-      for J in 1 .. 150 loop
-        begin   
+     for J in 1 .. 150 loop 
+      -- begin   
             -- Launch the job
-            Put_Line("Hello T2");
+	    Job_With_CPU(EET);
+          --  Put_Line("Hello T2");
             -- Check if the deadline is respected ...
-            
-            Next := Next + Period;
+            if Clock - Next > Deadline
+	    then
+		    Put_Line("Task 2 missed deadline ");
+	    end if;
+	    
+            Next := Next + Periode;
             delay until Next;           
-         end;
+       --  end;
       end loop; 
    end T_2;
 begin  
@@ -88,3 +105,4 @@ begin
    -- Pre-fault the stack
    Stack_Prefault;
 end Simple;
+

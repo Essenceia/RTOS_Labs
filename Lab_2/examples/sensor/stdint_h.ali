@@ -1,0 +1,67 @@
+V "GNAT Lib v5"
+A -gnat05
+A -march=armv4t
+A -mfloat-abi=soft
+A -mtls-dialect=gnu
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U stdint_h%s		stdint_h.ads		8feb3ef2 NE OO PK IL
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-c.ads		20110801143639 5421119b interfaces.c%s
+D stdint_h.ads		20160522180944 dbca2f69 stdint_h%s
+D system.ads		20141030114420 bb029e6a system%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+X 3 interfac.ads
+38K9*Interfaces 178e15 5|4r6 4r24
+X 4 i-c.ads
+18K20*C 230e17 5|4w17 4r35
+35I9*int<integer> 5|98r23 117r29
+36I9*short<short_integer> 5|96r23 115r29
+37I9*long<integer> 5|100r23 119r29 134r28 136r28 138r28 150r24 155r24
+40I9*signed_char<short_short_integer> 5|94r22 113r28 132r27
+43M9*unsigned 5|107r24 126r30
+44M9*unsigned_short 5|105r24 124r30
+45M9*unsigned_long 5|109r24 128r30 143r29 145r29 147r29 152r25 157r25
+47M9*unsigned_char 5|103r23 122r29 141r28
+X 5 stdint_h.ads
+6K9*stdint_h 183l5 183e13
+94I12*int8_t{4|40I9}
+96I12*int16_t{4|36I9}
+98I12*int32_t{4|35I9}
+100I12*int64_t{4|37I9}
+103M12*uint8_t{4|47M9}
+105M12*uint16_t{4|44M9}
+107M12*uint32_t{4|43M9}
+109M12*uint64_t{4|45M9}
+113I12*int_least8_t{4|40I9}
+115I12*int_least16_t{4|36I9}
+117I12*int_least32_t{4|35I9}
+119I12*int_least64_t{4|37I9}
+122M12*uint_least8_t{4|47M9}
+124M12*uint_least16_t{4|44M9}
+126M12*uint_least32_t{4|43M9}
+128M12*uint_least64_t{4|45M9}
+132I12*int_fast8_t{4|40I9}
+134I12*int_fast16_t{4|37I9}
+136I12*int_fast32_t{4|37I9}
+138I12*int_fast64_t{4|37I9}
+141M12*uint_fast8_t{4|47M9}
+143M12*uint_fast16_t{4|45M9}
+145M12*uint_fast32_t{4|45M9}
+147M12*uint_fast64_t{4|45M9}
+150I12*intptr_t{4|37I9}
+152M12*uintptr_t{4|45M9}
+155I12*intmax_t{4|37I9}
+157M12*uintmax_t{4|45M9}
+

@@ -1,6 +1,6 @@
 V "GNAT Lib v7"
-M P 97 W=b
-P TR  ZX
+M P 0 W=b
+P ZX
 
 RN
 RV NO_DELAY
@@ -14,7 +14,7 @@ RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 RV MAX_TASKS=1+
 
-U simple%b		simple.adb		89acd95c NE OO SU
+U simple%b		simple.adb		f91ae3be NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.dynamic_priorities%s  a-dynpri.adb	a-dynpri.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -46,7 +46,7 @@ D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
 D interfac.ads		20160502101001 5ab55268 interfaces%s
 D i-c.ads		20110801143639 5421119b interfaces.c%s
 D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
-D simple.adb		20180316102516 cc37f54f simple%b
+D simple.adb		20180316094801 bc81cfad simple%b
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
@@ -70,7 +70,6 @@ D s-tassta.ads		20170112134946 5a53a7c6 system.tasking.stages%s
 D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
-D gnat.adc		20180316100828 00000000
 X 1 ada.ads
 16K9*Ada 20e8 17|1r6 1r23 2r6 2r25 3r6 3r31 4r6 4r35 5r6 5r34 37r14 39r26
 . 39r53 40r18 52r15 76r14 78r28 78r55 80r20 85r15

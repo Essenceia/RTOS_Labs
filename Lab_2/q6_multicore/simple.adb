@@ -19,14 +19,14 @@ procedure Simple is
    -- Set the priority of the main procedure Simple at maximum. Note that if this 
    -- setting is not done, then the priorities of T_1 and T_2 below will not be set 
    -- at the desired level ...
-  pragma Priority(System.Priority'Last);
+  pragma Priority(System.Priority'First);
   -- inheritence for prority for T1 and T2
    -- Declare an anonymous task T_1 and set its priority ...
    task T_1 is
-   pragma Priority(System.Priority'Last);
+   pragma Priority(System.Priority'First);
    end T_1;
    task T_2 is
-   pragma Priority(System.Priority'Last);
+   pragma Priority(System.Priority'First);
    end T_2;
    -- Declare an anonymous task T_2 and set its priority ...
    
@@ -36,9 +36,9 @@ procedure Simple is
    task body T_1 is 
       Next : Ada.Real_Time.Time;
      -- declare variables
-      Periode : constant Ada.Real_Time.Time_Span := Ada.Real_Time.Milliseconds(40);--todo finish from here 
-      Deadline : Ada.Real_Time.Time_Span := Milliseconds(40); 
-      EET :Long_Integer:= 20*1000000; -- *150;
+      Periode : constant Ada.Real_Time.Time_Span := Ada.Real_Time.Milliseconds(60);--todo finish from here 
+      Deadline : Ada.Real_Time.Time_Span := Milliseconds(60); 
+      EET :Long_Integer:= 18*1000000; -- *150;
      
       -- Set the period ...
      
@@ -75,12 +75,12 @@ for J in 1 .. 150 loop -- for testing only
    task body T_2 is  
       Next : Ada.Real_Time.Time;
       -- Set the period ... 
-  	Periode : constant Ada.Real_Time.Time_Span := Ada.Real_Time.Milliseconds(80);    
+  	Periode : constant Ada.Real_Time.Time_Span := Ada.Real_Time.Milliseconds(60);    
       -- Set the deadline ...
-	Deadline : Ada.Real_Time.Time_Span := Milliseconds(80);
+	Deadline : Ada.Real_Time.Time_Span := Milliseconds(60);
       
       -- Set the EET as a long integer to be passed to job_with_cpu_time ...
-      EET : Long_Integer := 40*1000000;
+      EET : Long_Integer := 38*1000000;
    begin 
       Next := Ada.Real_Time.Clock;     
      for J in 1 .. 150 loop 

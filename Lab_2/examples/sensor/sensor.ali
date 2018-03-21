@@ -1,0 +1,130 @@
+V "GNAT Lib v5"
+M P W=b
+P ZX
+
+RN
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_RELATIVE_DELAY
+RV SPARK_05
+
+U sensor%b		sensor.adb		ca027ecd NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.streams.stream_io%s  a-ststio.adb		a-ststio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W bcm2835_h%s		bcm2835_h.ads		bcm2835_h.ali
+W interfaces%s		interfac.ads		interfac.ali
+W interfaces.c%s	i-c.adb			i-c.ali
+W system.arith_64%s	s-arit64.adb		s-arit64.ali
+W system.concat_2%s	s-conca2.adb		s-conca2.ali
+W system.img_lld%s	s-imglld.adb		s-imglld.ali
+
+D ada.ads		20070406091342 3ffc8e18 ada%s
+D a-calend.ads		20141120112812 d986d312 ada.calendar%s
+D a-caldel.ads		20140120152337 9f20b83d ada.calendar.delays%s
+D a-comlin.ads		20140225151544 ea62afbc ada.command_line%s
+D a-except.ads		20140730140058 5250cb69 ada.exceptions%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20141120112812 02069903 ada.real_time%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-ststio.ads		20120709130952 c3455b31 ada.streams.stream_io%s
+D a-tags.ads		20140730140058 dc4d0634 ada.tags%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
+D bcm2835_h.ads		20160522180944 ba6d935f bcm2835_h%s
+D interfac.ads		20141120112812 6033a23f interfaces%s
+D i-c.ads		20110801143639 5421119b interfaces.c%s
+D i-cstrin.ads		20140611122922 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D sensor.adb		20160522195552 37026453 sensor%b
+D stdint_h.ads		20160522180944 dbca2f69 stdint_h%s
+D system.ads		20141030114420 bb029e6a system%s
+D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
+D s-arit64.ads		20130103110520 404da5f2 system.arith_64%s
+D s-conca2.ads		20140225151544 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-imglld.ads		20090409150019 f3220969 system.img_lld%s
+D s-linux.ads		20150107101203 2fda6ad1 system.linux%s
+D s-multip.ads		20101011073009 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20160206092136 7add0795 system.os_constants%s
+D s-osinte.ads		20150107101203 e9e28195 system.os_interface%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-soflin.ads		20140801100131 aa763b52 system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stausa.ads		20110804134155 017a0a05 system.stack_usage%s
+D s-stalib.ads		20150220094550 fa0a3617 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20140613095942 2b3f8252 system.task_info%s
+D s-taspri.ads		20141120144719 368bb592 system.task_primitives%s
+D s-taprop.ads		20140521131406 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20150106085750 339749f0 system.tasking%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 19e8 18|3r6 3r23 4r6 5r6 5r28 6r6 13r18 14r16 15r13 16r21 36r22
+. 40r20 45r16
+X 4 a-comlin.ads
+38K13*Command_Line 139e21 18|5w10 5r32
+X 7 a-reatim.ads
+39K13*Real_Time 141e18 18|6w10 13r22 14r20 15r17 16r25 36r26 40r24 45r20
+41O9*Time<duration> 18|13r32 14r30 15r27
+46O9*Time_Span<duration> 18|16r35
+53V13*Clock{41O9} 18|36s36 40s34
+58V14*"-"{46O9} 18|43s32
+80V13*To_Duration{duration} 18|45s30
+X 8 a-stream.ads
+36K13*Streams 87e16 18|4r10
+X 9 a-ststio.ads
+39K21*Stream_IO 223e26 18|4w18
+X 11 a-textio.ads
+49K13*Text_IO 471e16 18|3w10 3r27
+263U14*Put_Line 18|20s7 28s4 47s4 54s7
+X 13 bcm2835_h.ads
+8K9*bcm2835_h 1878e14 18|1w6 9r68 10r68 11r67 12r67 19r15 24r4 25r4 27r4
+. 31r4 33r4 35r10 39r10 49r4 50r4 53r15
+711M12*bcm2835FunctionSelect{15|43M9}
+712m4*BCM2835_GPIO_FSEL_INPT{711M12} 18|11r77
+713m4*BCM2835_GPIO_FSEL_OUTP{711M12} 18|12r77
+841M12*RPiGPIOPin{15|43M9}
+851m4*RPI_GPIO_P1_16{841M12} 18|9r78
+852m4*RPI_GPIO_P1_18{841M12} 18|10r78
+1111V13*bcm2835_init{15|35I9} 18|19s25
+1118V13*bcm2835_close{15|35I9} 18|53s25
+1240U14*bcm2835_gpio_fsel 18|24s14 25s14
+1258U14*bcm2835_gpio_clr 18|49s14 50s14
+1286V13*bcm2835_gpio_lev{19|103M12} 18|35s20 39s20
+1503U14*bcm2835_gpio_write 18|27s14 31s14 33s14
+X 14 interfac.ads
+38K9*Interfaces 178e15 18|2r6 2r24 9r11 9r41 10r11 10r41 11r10 11r40 12r10
+. 12r40
+54I9*Integer_64<long_long_integer>
+X 15 i-c.ads
+18K20*C 230e17 18|2w17 2r35 9r22 9r52 10r22 10r52 11r21 11r51 12r21 12r51
+35I9*int<integer>
+43M9*unsigned
+47M9*unsigned_char 18|9r24 9r54 10r24 10r54 11r23 11r53 12r23 12r53
+X 18 sensor.adb
+8U11*Sensor 8b11 57l5 57t11
+9m4 Trig{15|47M9} 24r32 27r33 31r33 33r33 49r31
+10m4 Echo{15|47M9} 25r32 35r37 39r37 50r31
+11m4 Inpu{15|47M9} 25r37
+12m4 Outp{15|47M9} 24r37
+13o4 Pulse_Start{7|41O9} 36m7 43r34
+14o4 Pulse_End{7|41O9} 40m7 43r22
+16o4 Pulse_Duration{7|46O9} 43m4 45r43
+17o4 Distance{duration} 45m4 47r46
+X 22 s-arit64.ads
+44I12*Int64{14|54I9}
+54V13*Multiply_With_Ovflo_Check{44I12} 55i<c,__gnat_mulv64>22
+X 35 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+

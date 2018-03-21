@@ -1,0 +1,27 @@
+with bcm2835_h;
+with Interfaces.C; use Interfaces.C;
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Streams.Stream_IO;
+with Ada.Command_Line; use Ada.Command_Line;
+
+procedure Blink is
+begin
+   if integer(bcm2835_h.bcm2835_init) = 0 then 
+      put_line("Error while initializing BCM2835 library");
+   end if;
+   
+   bcm2835_h.bcm2835_gpio_fsel(Interfaces.C.unsigned_char(bcm2835_h.RPI_GPIO_P1_11), 
+                               Interfaces.C.unsigned_char(bcm2835_h.BCM2835_GPIO_FSEL_OUTP));
+   
+   while TRUE loop
+      bcm2835_h.bcm2835_gpio_write(Interfaces.C.unsigned_char(bcm2835_h.RPI_GPIO_P1_11), 1);
+      bcm2835_h.bcm2835_delay(500);
+      bcm2835_h.bcm2835_gpio_write(Interfaces.C.unsigned_char(bcm2835_h.RPI_GPIO_P1_11), 0);
+      bcm2835_h.bcm2835_delay(500);
+   end loop;
+   
+   
+   if integer(bcm2835_h.bcm2835_close) = 0 then
+      put_line("Error while closing BCM2835 library");
+   end if;
+end;

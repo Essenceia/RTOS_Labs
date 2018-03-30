@@ -1,0 +1,3 @@
+pragma Task_Dispatching_Policy(FIFO_Within_Priorities);
+-- Activate the HLP locking policy (Immediate Ceiling Priority Protocol ICPP in the Ada jargon) ...
+pragma Locking_Policy(Ceiling_Locking);

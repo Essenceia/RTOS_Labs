@@ -1,3 +1,8 @@
 \babel@toc {english}{}
 \contentsline {section}{\numberline {1}The protected object Resource}{2}{section.1}
 \contentsline {subsection}{\numberline {1.1}Object mutual exclusion in Ada}{2}{subsection.1.1}
+\contentsline {section}{\numberline {2}The concurrent programs Shared\_2 and Shared\_3}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Shared\_2}{2}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Multi-core}{2}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Mono-core}{2}{subsubsection.2.1.2}
+\contentsline {subsection}{\numberline {2.2}Shared\_3}{2}{subsection.2.2}

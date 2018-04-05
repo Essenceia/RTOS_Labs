@@ -7,7 +7,7 @@ RV NO_PROTECTED_TYPES
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV SPARK_05
 
-U resources%b		resources.adb		9939aa58 NE OO PK
+U resources%b		resources.adb		4ee94d80 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -17,7 +17,7 @@ W interfaces.c%s	i-c.adb			i-c.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
-U resources%s		resources.ads		9a29c009 EE NE OO PK
+U resources%s		resources.ads		fe6a8778 EE NE OO PK
 W system.tasking%s	s-taskin.adb		s-taskin.ali
 W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 
@@ -33,8 +33,8 @@ D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
 D interfac.ads		20160502101001 5ab55268 interfaces%s
 D i-c.ads		20110801143639 5421119b interfaces.c%s
 D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
-D resources.ads		20180330095634 9a29c009 resources%s
-D resources.adb		20180330095516 991707ba resources%b
+D resources.ads		20180405121026 fe6a8778 resources%s
+D resources.adb		20180405121132 2a84a713 resources%b
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
@@ -73,14 +73,13 @@ X 13 resources.ads
 3V13*Job_With_CPU_Time_Returned{long_integer} 3>40 4b<c,job_with_cpu_time>24
 . 14|27s16
 3i40 etime{long_integer}
-5i4*EE{long_integer} 14|27r43
 6W19*Resource 6d28 11E7 12l8 12e16 14|8b19 30l8 30t16
 6i28 Initial_Value{long_integer} 11r42
 7V16 Read{long_integer} 14|10b16 16l11 16t15
 8U17 Write 8>23 14|17b17 22l11 22t16 27s10
 8i23 New_Value{long_integer} 14|17b23 20r22
 9U17 Lock_For 9>26 14|23b17 29l11 29t19
-9i26 Lock_Time{long_integer} 14|23b26
+9i26 Lock_Time{long_integer} 14|23b26 27r43
 11i7 The_Data{long_integer} 14|14r17 20r10
 X 27 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22

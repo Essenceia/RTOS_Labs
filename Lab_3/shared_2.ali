@@ -1,0 +1,135 @@
+V "GNAT Lib v7"
+M P 97 W=b
+P LC TF  ZX
+
+RN
+RV NO_DELAY
+RV NO_DYNAMIC_PRIORITIES
+RV NO_IO
+RV NO_LOCAL_PROTECTED_OBJECTS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_TASK_HIERARCHY
+RV NO_TASKING
+RV NO_DEFAULT_INITIALIZATION
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+RV MAX_TASKS=1+
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U shared_2%b		shared_2.adb		3dd77b48 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.dynamic_priorities%s  a-dynpri.adb	a-dynpri.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.task_identification%s  a-taside.adb	a-taside.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W resources%s		resources.adb		resources.ali
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20170106103348 76789da1 ada%s
+D a-dynpri.ads		20140611123156 cebd80e7 ada.dynamic_priorities%s
+D a-except.ads		20151016123252 291912d5 ada.exceptions%s
+D a-inteio.ads		20070406091342 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20160420090448 a87e2da7 ada.real_time%s
+D a-retide.ads		20090409150019 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
+D a-tags.ads		20151016130316 01f5e3ef ada.tags%s
+D a-taside.ads		20160420090448 c6417f71 ada.task_identification%s
+D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
+D a-tiinio.ads		20140717063513 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20170106103348 31484697 ada.unchecked_conversion%s
+D interfac.ads		20160502101001 5ab55268 interfaces%s
+D i-c.ads		20110801143639 5421119b interfaces.c%s
+D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
+D resources.ads		20180405121026 fe6a8778 resources%s
+D shared_2.adb		20180405124738 8626d023 shared_2%b
+D system.ads		20170510173650 4635ec04 system%s
+D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
+D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
+D s-exctab.ads		20140225151139 54135002 system.exception_table%s
+D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
+D s-linux.ads		20150107101203 2fda6ad1 system.linux%s
+D s-multip.ads		20101011073009 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20180313185316 7b5577db system.os_constants%s
+D s-osinte.ads		20170314092617 ad16bc4a system.os_interface%s
+D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
+D s-soflin.ads		20151020124036 14e1eb6c system.soft_links%s
+D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
+D s-stausa.ads		20110804134155 017a0a05 system.stack_usage%s
+D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
+D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
+D s-tasinf.ads		20140613095942 2b3f8252 system.task_info%s
+D s-taspri.ads		20141120144719 e3ab4429 system.task_primitives%s
+D s-taprop.ads		20140521131406 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20170112134946 05d6152c system.tasking%s
+D s-taprob.ads		20170106114239 acd6094d system.tasking.protected_objects%s
+D s-tassta.ads		20170112134946 5a53a7c6 system.tasking.stages%s
+D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+D gnat.adc		20180330094939 00000000
+X 1 ada.ads
+16K9*Ada 20e8 18|1r6 1r23 2r6 2r25 3r6 3r31 4r6 4r35 5r6 5r34 40r14 52r15
+. 78r14 88r15
+X 2 a-dynpri.ads
+19K13*Dynamic_Priorities 33e27 18|5w10 5r38
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[12|46] 18|3w10 3r35
+X 6 a-reatim.ads
+39K13*Real_Time 187e18 18|2w10 2r29 40r18 52r19 78r18 88r19
+51O9*Time<duration> 18|40r28 78r28
+56O9*Time_Span<duration> 18|42r16 44r18 81r16
+63V13*Clock{51O9} 18|52s29 55s21 61s16 88s29
+67V14*"+"{51O9} 18|61s28 68s26 95s31
+76V14*"<"{boolean} 18|61r22
+121V13*Milliseconds{56O9} 18|42s29 44s30 81s29
+X 10 a-taside.ads
+39K13*Task_Identification 97e28 18|4w10 4r39
+X 11 a-textio.ads
+49K13*Text_IO 471e16 18|1w10 1r27
+263U14*Put_Line 18|62s13 66s13
+X 17 resources.ads
+1K9*Resources 13e14 18|7w6 7r21
+3V13*Job_With_CPU_Time_Returned{long_integer} 18|57s20
+6W19*Resource 12e16 18|21r25
+7V16 Read{long_integer} 18|63s31 94s36
+9U17 Lock_For 18|59s25 93s30
+X 18 shared_2.adb
+9U11*Shared_2 9b11 105l5 105t13
+10U14*Stack_Prefault 11b<c,stack_prefault>22 104s4
+12U14*Lock_Mem 13b<c,lock_memory>22 102s4
+14U14*Print 14>20 15b<c,print_values>21 63s13 64s13 94s18
+14i20 Val{long_integer}
+21w4 Shared_Data{17|6W19} 59r13 63r19 93r18 94r24
+25t9 High_Priority_Task 39b14 72l8 72t26
+31t9 Low_Priority_Task 77b14 99l8 99t25
+40o7 Next{6|51O9} 52m7 55m13 61r24 68m13 68r21 69r25
+42o7 Period{6|56O9} 68r28
+44o7 Deadline{6|56O9} 61r29
+49i7 tmp{long_integer} 57m13 64r19
+50i7 EE{long_integer} 57r47 59r34
+53i11 J{integer}
+78o7 Next{6|51O9} 88m7 95m18 95r26 96r25
+81o7 Period{6|56O9} 95r33
+83i7 Deadline{long_integer}
+85i7 EE{long_integer} 93r39
+89i11 J{integer}
+X 19 system.ads
+37K9*System 18|6r6 6r28 18r20 26r21 32r24 19|156e11
+108I12*Any_Priority{integer}
+109I12*Priority{108I12} 18|18r27 26r28 32r31
+X 31 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 34 s-tasinf.ads
+46K16*Task_Info 18|6w13 6r35 34|102e21
+

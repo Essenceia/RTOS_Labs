@@ -6,14 +6,13 @@ struct timespec diff(struct timespec start, struct timespec end);
 
 long job_with_cpu_time(long execution_time)
 {
-  struct timespec time_start,time_end, time_begin_start;
+  struct timespec time_start,time_end;
   int exit=0;
 
   // Statements to create a job of duration execution_time given a argument ...
   long delta;
 
   clock_gettime(CLOCK_THREAD_CPUTIME_ID, &time_start);
-  time_begin_start.tv_nsec = time_begin_start.tv_nsec;
   while (!exit) {
 
     clock_gettime(CLOCK_THREAD_CPUTIME_ID, &time_end);
@@ -22,28 +21,17 @@ long job_with_cpu_time(long execution_time)
     if (delta > execution_time) {
       exit = 1;
     }}
-
-      return (time_begin_start.tv_nsec - time_end.tv_nsec);
+    
+    printf("exepected execution time : %d actual %d ",execution_time,delta); 
+    delta = delta / 1000000;  
+    return delta;
     // If you wish, you can print the time (in ns) elapsed between time_start
   // and time_end using the function diff below ...
 }
 
-
-long job_with_cpu_time_returned(long execution_time)
-{
-  struct timespec time_start, time_end;
-  int exit=0;
-  
-  // Statements to create a job of duration execution_time given a argument ...
-  
-
-  // If you wish, you can print the time (in ns) elapsed between time_start
-  // and time_end using the function diff below ...
-  
-  // Return the measured time in ns ...
+void print_values(long i1){
+	printf("value : %d\n", i1);
 }
-
-
 
 
 struct timespec diff(struct timespec start, struct timespec end)

@@ -1,0 +1,84 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{listings}
+\usepackage{verbatim}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  moredelim=**[is][\color{red}]{@}{@}
+}
+\author{Julia Desmazes}
+\title{Lab1 Rasbian RT}
+\begin{document}
+
+\begin{titlepage}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=10cm]{ECE.png}
+\end{center}
+\end{figure}
+
+\begin{center}
+%date
+\today
+\end{center}
+
+\vspace{1cm}
+
+
+\begin{center}
+\begin{tabular}{c}
+\hline
+    \vspace{0.2cm}\\
+    \textbf{{\Large RTOS}}\\
+\\
+\textbf{{\Huge Lab 1}}\\
+\\
+    \textbf{{\LARGE ...}}\\
+\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{3cm}
+
+\begin{table}[h]
+\begin{tabular}{rrl}
+\hspace{5 cm} & School: & ECE Paris\\
+& Class: & RTOS\\
+& Author: & Julia DESMAZES \\
+& & Andreas ORTALDA\\
+& & Nicolas VERHELST \\
+\end{tabular}
+\end{table}
+
+\end{titlepage}
+
+\tableofcontents
+
+\thispagestyle{empty}
+
+
+\newpage
+\section{The protected object Resource}
+\subsection{Object mutual exclusion in Ada}
+The ada language allows us to create an objects howms private data will be updated only under mutual exclusion. This implicitly creats an acces barrier around our object that is evaluated on eatch call to our protected instance. If one of our protected writing tasks is beeing called then the barrier is evaluated to false and our call is blocked until the writing call is finished. At that point our barrier evaluation becomes true and we can acces the ressource for modification.
+\\We use the \textbf{protected} keyword to enforce this behaviour for our subprograms on our protected entities.
+%This is because while the code is being executed other tasks are delayed when they try to gain access to the protected object.
+\begin{lstlisting}[language=ada,caption={chrt man page}]
+Protected object
+\end{lstlisting}
+%our code
+function to job\_with\_cpu\_time\_returned is declared outside our protected section so calling this function directly on our object will not result on a mutualy exclusif call.
+Yet, calling this exact same function in Lock will result in a mutulay excusive execution as Lock is declared as \textit{protected} and it modifies our private ressource.
+\end{document}

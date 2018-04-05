@@ -16,7 +16,7 @@ RV SPARK_05
 RV MAX_TASKS=1+
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U shared_2%b		shared_2.adb		3dd77b48 NE OO SU
+U shared_3%b		shared_3.adb		56923c52 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.dynamic_priorities%s  a-dynpri.adb	a-dynpri.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
@@ -51,7 +51,7 @@ D interfac.ads		20160502101001 5ab55268 interfaces%s
 D i-c.ads		20110801143639 5421119b interfaces.c%s
 D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
 D resources.ads		20180405121026 fe6a8778 resources%s
-D shared_2.adb		20180405155049 8626d023 shared_2%b
+D shared_3.adb		20180405155515 ed639739 shared_3%b
 D system.ads		20170510173650 4635ec04 system%s
 D s-atacco.ads		20120515093410 4c36d12f system.address_to_access_conversions%s
 D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
@@ -78,55 +78,59 @@ D s-unstyp.ads		20160502101423 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
 D gnat.adc		20180330094939 00000000
 X 1 ada.ads
-16K9*Ada 20e8 18|1r6 1r23 2r6 2r25 3r6 3r31 4r6 4r35 5r6 5r34 41r14 53r15
-. 79r14 89r15
+16K9*Ada 20e8 18|1r6 1r23 2r6 2r25 3r6 3r31 4r6 4r35 5r6 5r34 42r14 73r14
+. 107r14
 X 2 a-dynpri.ads
 19K13*Dynamic_Priorities 33e27 18|5w10 5r38
 X 4 a-inteio.ads
 18K13*Integer_Text_IO[12|46] 18|3w10 3r35
 X 6 a-reatim.ads
-39K13*Real_Time 187e18 18|2w10 2r29 41r18 53r19 79r18 89r19
-51O9*Time<duration> 18|41r28 79r28
-56O9*Time_Span<duration> 18|43r16 45r18 82r16
-63V13*Clock{51O9} 18|53s29 56s21 62s16 89s29
-67V14*"+"{51O9} 18|62s28 69s26 96s31
-76V14*"<"{boolean} 18|62r22
-121V13*Milliseconds{56O9} 18|43s29 45s30 82s29
+39K13*Real_Time 187e18 18|2w10 2r29 42r18 73r18 107r18
+51O9*Time<duration> 18|42r28 73r28 107r28
+56O9*Time_Span<duration> 18|44r16 47r18 75r17 77r18 109r16 111r18
+63V13*Clock{51O9} 18|54s22 58s16 87s21 93s16 117s21 120s16
+67V14*"+"{51O9} 18|58s28 63s26 93s28 98s26 120s28 125s26
+76V14*"<"{boolean} 18|58r22 93r22 120r22
+121V13*Milliseconds{56O9} 18|44s29 47s30 75s30 77s30 109s29 111s30
 X 10 a-taside.ads
 39K13*Task_Identification 97e28 18|4w10 4r39
 X 11 a-textio.ads
 49K13*Text_IO 471e16 18|1w10 1r27
-263U14*Put_Line 18|63s13 67s13
+263U14*Put_Line 18|59s23 61s23 94s23 96s23 121s25 123s25
 X 17 resources.ads
 1K9*Resources 13e14 18|7w6 7r21
-3V13*Job_With_CPU_Time_Returned{long_integer} 18|58s20
-6W19*Resource 12e16 18|22r25
-7V16 Read{long_integer} 18|64s31 95s36
-9U17 Lock_For 18|60s25 94s30
-X 18 shared_2.adb
-9U11*Shared_2 9b11 106l5 106t13
-10U14*Stack_Prefault 11b<c,stack_prefault>22 105s4
-13U14*Lock_Mem 14b<c,lock_memory>22 103s4
-16U14*Print 16>20 17b<c,print_values>21 64s13 65s13 95s18
-16i20 Val{long_integer}
-22w4 Shared_Data{17|6W19} 60r13 64r19 94r18 95r24
-26t9 High_Priority_Task 40b14 73l8 73t26
-32t9 Low_Priority_Task 78b14 100l8 100t25
-41o7 Next{6|51O9} 53m7 56m13 62r24 69m13 69r21 70r25
-43o7 Period{6|56O9} 69r28
-45o7 Deadline{6|56O9} 62r29
-50i7 tmp{long_integer} 58m13 65r19
-51i7 EE{long_integer} 58r47 60r34
-54i11 J{integer}
-79o7 Next{6|51O9} 89m7 96m18 96r26 97r25
-82o7 Period{6|56O9} 96r33
-84i7 Deadline{long_integer}
-86i7 EE{long_integer} 94r39
-90i11 J{integer}
+3V13*Job_With_CPU_Time_Returned{long_integer} 18|56s20 89s20
+6W19*Resource 12e16 18|18r28
+9U17 Lock_For 18|91s25 119s25
+X 18 shared_3.adb
+9U11*Shared_3 9b11 136l5 136t13
+10U14*Stack_Prefault 11b<c,stack_prefault>22 135s4
+12U14*Lock_Mem 13b<c,lock_memory>22 133s4
+18w7 Shared_Data{17|6W19} 91r13 119r13
+22t9 High_Priority_Task 41b14 67l8 67t26
+28t9 Medium_Priority_Task 72b14 102l8 102t28
+34t9 Low_Priority_Task 106b14 130l8 130t25
+42o7 Next{6|51O9} 54m14 58r24 63m13 63r21 64r25
+44o7 Period{6|56O9} 63r28
+47o7 Deadline{6|56O9} 58r29
+49i7 EE{long_integer} 56r47
+50i7 tmp{long_integer} 56m13
+52i11 J{integer}
+73o7 Next{6|51O9} 87m13 93r24 98m13 98r21 99r25
+75o8 Period{6|56O9} 98r28
+77o7 Deadline{6|56O9} 93r29
+81i7 EE{long_integer} 89r47 91r34
+82i7 tmp{long_integer} 89m13
+85i11 J{integer}
+107o7 Next{6|51O9} 117m13 120r24 125m13 125r21 126r25
+109o7 Period{6|56O9} 125r28
+111o7 Deadline{6|56O9} 120r29
+113i7 EE{long_integer} 119r34
+115i11 J{integer}
 X 19 system.ads
-37K9*System 18|6r6 6r28 19r20 27r21 33r24 19|156e11
+37K9*System 18|6r6 6r28 15r20 23r24 29r24 35r27 19|156e11
 108I12*Any_Priority{integer}
-109I12*Priority{108I12} 18|19r27 27r28 33r31
+109I12*Priority{108I12} 18|15r27 23r31 29r31 35r34
 X 31 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22

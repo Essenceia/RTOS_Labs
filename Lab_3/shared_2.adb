@@ -9,12 +9,13 @@ with Resources; use Resources;
 procedure Shared_2 is
    procedure Stack_Prefault;
    pragma Import (C, Stack_Prefault, "stack_prefault");
+
    procedure Lock_Mem;
    pragma Import (C, Lock_Mem, "lock_memory");
+
    procedure Print(Val : Long_Integer);
    pragma Import(C, Print, "print_values");
-   -- Import the C function "job_with_cpu_time" in clk_time.c
-   
+
    pragma Priority(System.Priority'Last); 
    
    -- Declare a shared protected resource Shared_Data of type Resource ...
